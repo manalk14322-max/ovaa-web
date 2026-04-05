@@ -1,0 +1,2290 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Ovaa – luxury modern sofas & furniture UK. Timeless designs, premium materials, free delivery on orders over £800. Shop sofas, armchairs, and accessories.">
+  <meta name="keywords" content="sofas UK, furniture UK, luxury sofa, modern sofas, Ovaa, contemporary furniture, velvet sofa, UK delivery">
+  <title>Ovaa | Luxury Modern Furniture – UK</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: linear-gradient(180deg, #ffffff 0%, #fbf7f1 100%);
+      color: #111111;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    h1, h2, h3, h4, .logo, .nav-links a, .btn {
+      font-family: 'Manrope', sans-serif;
+    }
+    .serif, .hero-title, .brand-quote {
+      font-family: 'Manrope', sans-serif;
+    }
+    :root {
+      --cream: #f7f2ea;
+      --beige: #ece4d8;
+      --deep-blue: #111111;
+      --black: #0f0f10;
+      --gold: #c7a35a;
+      --gold-light: #e2c88d;
+      --surface: #ffffff;
+      --line: rgba(17, 17, 17, 0.08);
+      --shadow-sm: 0 14px 30px rgba(17,17,17,0.06);
+      --shadow-hover: 0 32px 55px -18px rgba(17,17,17,0.18);
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    /* header */
+    header {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(252,248,242,0.96));
+      border-bottom: 1px solid rgba(198,164,63,0.12);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(10,47,68,0.05);
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #0A2F44 0%, #123D58 62%, #C6A43F 150%);
+      border: 1px solid rgba(198,164,63,0.28);
+      box-shadow: 0 10px 20px rgba(10,47,68,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .logo-icon {
+      font-size: 1.2rem;
+      color: #F9F4EC;
+      text-shadow: 0 1px 0 rgba(10,47,68,0.18);
+    }
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.05;
+      min-width: 0;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--deep-blue);
+    }
+    .brand-accent {
+      width: 20px;
+      height: 2px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: skewX(-18deg);
+      flex: 0 0 auto;
+    }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: 500;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--gold);
+    }
+    .cart-icon {
+      font-size: 1.3rem;
+      position: relative;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -12px;
+      background: var(--gold);
+      color: var(--deep-blue);
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 30px;
+      padding: 2px 6px;
+      min-width: 18px;
+      text-align: center;
+    }
+    .mobile-menu {
+      display: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    /* buttons */
+    .btn {
+      display: inline-block;
+      background: var(--deep-blue);
+      color: white;
+      padding: 12px 32px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.25s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--deep-blue);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--deep-blue);
+      color: var(--deep-blue);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+    }
+    /* hero section (full-width, GoDaddy style) */
+    .hero {
+      background: linear-gradient(135deg, #FCF8F2 0%, #F5EFE7 100%);
+      padding: 70px 0;
+    }
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .hero-content {
+      flex: 1;
+    }
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--deep-blue);
+      font-family: 'Playfair Display', serif;
+    }
+    .hero-content p {
+      font-size: 1.1rem;
+      margin: 24px 0;
+      color: #3a4e55;
+    }
+    .hero-image {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+    }
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .hero-image:hover img {
+      transform: scale(1.02);
+    }
+    /* section headers */
+    .section-header {
+      text-align: center;
+      margin: 64px 0 40px;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      color: var(--deep-blue);
+      letter-spacing: -0.2px;
+    }
+    .section-header p {
+      color: #5b6e6b;
+      max-width: 600px;
+      margin: 12px auto 0;
+    }
+    /* product grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .product-card {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #f0eae2;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+    }
+    .product-img {
+      background: #F7F3EE;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .product-card:hover .product-img img {
+      transform: scale(1.05);
+    }
+    .product-info {
+      padding: 20px;
+    }
+    .product-info h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin: 8px 0;
+    }
+    .add-to-cart {
+      background: var(--deep-blue);
+      width: 100%;
+      border: none;
+      color: white;
+      padding: 12px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      transition: 0.2s;
+    }
+    .add-to-cart:hover {
+      background: #0F405A;
+    }
+    /* category filters */
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px 0 48px;
+    }
+    .cat-btn {
+      background: transparent;
+      border: 1px solid #ddd6cd;
+      padding: 8px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .cat-btn.active, .cat-btn:hover {
+      background: var(--deep-blue);
+      color: white;
+      border-color: var(--deep-blue);
+    }
+    /* brand story banner */
+    .brand-story {
+      background: var(--beige);
+      padding: 70px 0;
+      margin: 40px 0;
+      border-radius: 48px;
+    }
+    .story-inner {
+      display: flex;
+      gap: 56px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .story-text {
+      flex: 1;
+    }
+    .story-text h3 {
+      font-size: 2rem;
+      color: var(--deep-blue);
+      font-family: 'Playfair Display', serif;
+    }
+    /* footer */
+    footer {
+      background: #0F1C24;
+      color: #e2dfd7;
+      padding: 56px 0 28px;
+      margin-top: 70px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 48px;
+    }
+    .footer-grid h4 {
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    .footer-grid a {
+      color: #cbcbc0;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      transition: 0.2s;
+    }
+    .footer-grid a:hover {
+      color: var(--gold);
+    }
+    .subscribe {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .subscribe input {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 40px;
+      border: none;
+      outline: none;
+    }
+    .small-footer {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 0.8rem;
+      border-top: 1px solid #2c3e38;
+      padding-top: 24px;
+    }
+    /* cart drawer (modern slide) */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 400px;
+      height: 100vh;
+      background: white;
+      box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+      z-index: 1000;
+      transition: right 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+    }
+    .cart-drawer.open {
+      right: 0;
+    }
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+    .cart-items-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .checkout-btn {
+      background: var(--gold);
+      color: var(--deep-blue);
+      width: 100%;
+      margin-top: 20px;
+    }
+    .overlay {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: rgba(0,0,0,0.3);
+      z-index: 999;
+      display: none;
+    }
+    .overlay.active {
+      display: block;
+    }
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu {
+        display: block;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .logo-mark {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+      }
+      .logo-icon {
+        font-size: 1rem;
+      }
+      .brand-name {
+        font-size: 1.02rem;
+        letter-spacing: 0.11em;
+      }
+      .brand-accent {
+        width: 15px;
+      }
+      .cart-drawer {
+        width: 320px;
+      }
+      .container {
+        padding: 0 20px;
+      }
+    }
+    .text-gold { color: var(--gold); }
+
+    /* premium store overrides */
+    main {
+      display: block;
+    }
+    .logo-mark {
+      padding: 4px;
+      background: #fffaf3;
+      border-radius: 16px;
+      border: 1px solid rgba(199,163,90,0.18);
+    }
+    .logo-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+    header {
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid rgba(17,17,17,0.06);
+      box-shadow: 0 10px 30px rgba(17,17,17,0.04);
+    }
+    .nav-links {
+      gap: 28px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .nav-links a {
+      position: relative;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #121212;
+    }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 100%;
+      height: 1px;
+      transform: scaleX(0);
+      transform-origin: left;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transition: transform 0.24s ease;
+    }
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      transform: scaleX(1);
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+    .cart-icon {
+      color: var(--deep-blue);
+      font-size: 1.15rem;
+    }
+    .cart-icon:hover {
+      color: var(--gold);
+    }
+    .btn {
+      letter-spacing: 0.02em;
+      box-shadow: none;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: #161616;
+    }
+    .btn-outline {
+      border: 1px solid rgba(17,17,17,0.14);
+      color: var(--deep-blue);
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(10px);
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero {
+      padding: 44px 0 30px;
+      background:
+        radial-gradient(circle at top left, rgba(199,163,90,0.10), transparent 32%),
+        linear-gradient(180deg, #fffdf9 0%, #f7f2ea 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+      gap: 42px;
+      align-items: center;
+    }
+    .hero-content h1 {
+      font-size: clamp(3rem, 5vw, 5.2rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--deep-blue);
+      max-width: 11ch;
+    }
+    .hero-content p {
+      max-width: 56ch;
+      font-size: 1.04rem;
+      color: rgba(17,17,17,0.72);
+      margin: 22px 0 0;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(199,163,90,0.22);
+      background: rgba(255,255,255,0.6);
+      color: rgba(17,17,17,0.78);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 22px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .hero-badge {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,0.08);
+      background: rgba(255,255,255,0.78);
+      color: rgba(17,17,17,0.76);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+    .hero-visual {
+      position: relative;
+      min-height: 560px;
+      border-radius: 36px;
+    }
+    .hero-image-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 1px solid rgba(17,17,17,0.08);
+      background: #f7f2ea;
+    }
+    .hero-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: scale(1.01);
+    }
+    .hero-floating-card {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      width: min(68%, 340px);
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 14px;
+      border: 1px solid rgba(17,17,17,0.08);
+      box-shadow: 0 24px 45px rgba(17,17,17,0.14);
+    }
+    .hero-floating-card img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+    .section-shell {
+      padding: 88px 0;
+    }
+    .section-header {
+      margin: 0 0 34px;
+    }
+    .section-header .eyebrow,
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: rgba(17,17,17,0.58);
+    }
+    .section-header h2 {
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--deep-blue);
+      margin-top: 10px;
+    }
+    .section-header p {
+      margin-top: 12px;
+      color: rgba(17,17,17,0.66);
+      max-width: 60ch;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 26px;
+      margin-bottom: 0;
+    }
+    .product-card {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .product-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0), rgba(17,17,17,0.06));
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+    .product-card:hover::before {
+      opacity: 1;
+    }
+    .product-img {
+      height: 260px;
+      background: linear-gradient(180deg, #faf7f2, #f3ebe1);
+    }
+    .product-info {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .product-info h3 {
+      font-size: 1.08rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      color: #111;
+    }
+    .product-subline {
+      color: rgba(17,17,17,0.62);
+      font-size: 0.9rem;
+    }
+    .price {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin: 0;
+    }
+    .card-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .btn-small {
+      padding: 11px 14px;
+      font-size: 0.82rem;
+      border-radius: 999px;
+      width: 100%;
+      text-align: center;
+    }
+    .categories {
+      gap: 12px;
+      margin: 18px 0 30px;
+    }
+    .cat-btn {
+      background: #fff;
+      border: 1px solid rgba(17,17,17,0.10);
+      padding: 10px 18px;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .cat-btn.active, .cat-btn:hover {
+      background: var(--deep-blue);
+      color: #fff;
+      border-color: var(--deep-blue);
+    }
+    .feature-grid,
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .feature-card,
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow-sm);
+      padding: 24px;
+    }
+    .feature-card i {
+      font-size: 1.2rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .feature-card h3,
+    .testimonial-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.03rem;
+    }
+    .feature-card p,
+    .testimonial-card p {
+      color: rgba(17,17,17,0.66);
+    }
+    .story-banner {
+      background: linear-gradient(135deg, #111111 0%, #1d1d1f 100%);
+      color: #fff;
+      border-radius: 34px;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(240px, 0.92fr);
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 24px 50px rgba(17,17,17,0.18);
+    }
+    .story-banner .eyebrow {
+      color: rgba(255,255,255,0.6);
+    }
+    .story-banner h2,
+    .story-banner h3 {
+      color: #fff;
+      letter-spacing: -0.04em;
+      font-size: clamp(1.8rem, 2.8vw, 3rem);
+      line-height: 1.05;
+      margin: 12px 0;
+    }
+    .story-banner p {
+      color: rgba(255,255,255,0.72);
+      max-width: 60ch;
+    }
+    .story-bullets {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .story-bullet {
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.05);
+    }
+    .story-bullet strong {
+      display: block;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .story-bullet span {
+      color: rgba(255,255,255,0.66);
+      font-size: 0.88rem;
+    }
+    .editorial-showcase {
+      display: grid;
+      gap: 18px;
+    }
+    .editorial-banner {
+      position: relative;
+      min-height: 500px;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+      border: 1px solid rgba(17,17,17,0.08);
+      background: #ece4d8;
+    }
+    .editorial-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(17,17,17,0.52), rgba(17,17,17,0.12) 58%, rgba(17,17,17,0.42));
+      pointer-events: none;
+    }
+    .editorial-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .editorial-overlay {
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
+      z-index: 1;
+      max-width: 560px;
+      color: #fff;
+    }
+    .editorial-overlay h3 {
+      margin-top: 10px;
+      font-size: clamp(1.6rem, 2.6vw, 2.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      color: #fff;
+      max-width: 14ch;
+    }
+    .editorial-overlay p {
+      margin-top: 12px;
+      max-width: 52ch;
+      color: rgba(255,255,255,0.78);
+    }
+    .editorial-thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .editorial-card {
+      position: relative;
+      min-height: 180px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(17,17,17,0.08);
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .editorial-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.48));
+      pointer-events: none;
+    }
+    .editorial-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .editorial-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .editorial-card-label {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 14px;
+      z-index: 1;
+      color: #fff;
+    }
+    .editorial-card-label strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+    .editorial-card-label span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.76);
+    }
+    .detail-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: 36px;
+      align-items: start;
+    }
+    .detail-gallery,
+    .detail-panel {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .detail-gallery img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1 / 0.95;
+      object-fit: cover;
+    }
+    .detail-panel {
+      padding: 28px;
+    }
+    .detail-panel h1 {
+      font-size: clamp(2.1rem, 3vw, 3.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      margin: 8px 0 14px;
+    }
+    .detail-meta {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+    .detail-meta div {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: #faf7f2;
+      border: 1px solid rgba(17,17,17,0.06);
+      color: rgba(17,17,17,0.76);
+    }
+    .detail-bullets {
+      margin: 22px 0;
+      display: grid;
+      gap: 10px;
+    }
+    .detail-bullets div {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: rgba(17,17,17,0.72);
+    }
+    .detail-bullets i {
+      color: var(--gold);
+      margin-top: 3px;
+    }
+    .checkout-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(17,17,17,0.52);
+      z-index: 1090;
+      display: none;
+      backdrop-filter: blur(6px);
+    }
+    .checkout-backdrop.active {
+      display: block;
+    }
+    .checkout-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.98);
+      width: min(1100px, calc(100vw - 32px));
+      max-height: min(88vh, 960px);
+      overflow: auto;
+      background: #fff;
+      border-radius: 30px;
+      z-index: 1100;
+      box-shadow: 0 30px 80px rgba(17,17,17,0.26);
+      border: 1px solid rgba(17,17,17,0.08);
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .checkout-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(300px, 0.98fr);
+      gap: 22px;
+    }
+    .checkout-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .checkout-form input,
+    .checkout-form select,
+    .checkout-form textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(17,17,17,0.12);
+      background: #fff;
+      outline: none;
+      font: inherit;
+    }
+    .checkout-form textarea {
+      min-height: 94px;
+      resize: vertical;
+    }
+    .checkout-summary {
+      background: linear-gradient(180deg, #faf7f2, #f5efe5);
+      border-radius: 24px;
+      border: 1px solid rgba(17,17,17,0.08);
+      padding: 20px;
+      align-self: start;
+    }
+    .checkout-summary h3 {
+      margin-bottom: 14px;
+      font-size: 1.08rem;
+    }
+    .summary-lines {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: rgba(17,17,17,0.72);
+      font-size: 0.95rem;
+    }
+    .summary-total {
+      border-top: 1px solid rgba(17,17,17,0.10);
+      margin-top: 16px;
+      padding-top: 16px;
+      font-weight: 800;
+      color: #111;
+    }
+    .modal-close {
+      position: sticky;
+      top: 0;
+      margin-left: auto;
+      display: block;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(17,17,17,0.10);
+      background: #fff;
+      color: #111;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition-delay: var(--delay, 0s);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      background: #111111;
+      color: rgba(255,255,255,0.84);
+    }
+    .footer-grid {
+      grid-template-columns: 1.2fr 1fr 1fr 1.1fr;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .footer-brand .brand-name {
+      color: #fff;
+      font-size: 1.15rem;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+      background: rgba(255,255,255,0.03);
+    }
+    .social-links a:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .newsletter-note {
+      color: rgba(255,255,255,0.62);
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+    .footer-grid a {
+      color: rgba(255,255,255,0.72);
+    }
+    .footer-grid a:hover {
+      color: var(--gold);
+    }
+    .small-footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.54);
+    }
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .detail-layout,
+      .checkout-grid,
+      .story-banner {
+        grid-template-columns: 1fr;
+      }
+      .hero-visual {
+        min-height: 460px;
+      }
+      .feature-grid,
+      .testimonial-grid,
+      .story-bullets {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .editorial-thumbs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .editorial-banner {
+        min-height: 400px;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 860px) {
+      .nav-links {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 14px 18px;
+        margin-top: 14px;
+      }
+      .mobile-menu {
+        display: none;
+      }
+      .navbar {
+        justify-content: center;
+      }
+      .hero-content h1 {
+        font-size: clamp(2.4rem, 9vw, 3.2rem);
+      }
+      .hero-visual {
+        min-height: 380px;
+      }
+      .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      }
+      .feature-grid,
+      .testimonial-grid,
+      .story-bullets,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .editorial-thumbs {
+        grid-template-columns: 1fr;
+      }
+      .editorial-overlay {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+      }
+      .checkout-modal {
+        width: calc(100vw - 18px);
+        padding: 18px;
+      }
+      .cart-drawer {
+        width: min(92vw, 360px);
+      }
+      .container {
+        padding: 0 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo-area">
+        <div class="logo-mark">
+          <img src="ovaa-icon-clean.png" alt="OVAA logo mark" aria-hidden="true">
+        </div>
+        <div class="brand-copy">
+          <div class="brand-row">
+            <span class="brand-name">OVAA</span>
+            <span class="brand-accent"></span>
+          </div>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-page="shop">Shop</a></li>
+        <li><a href="#" class="nav-link" data-page="about">About</a></li>
+        <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+      </ul>
+      <button class="cart-icon" id="cartIconBtn">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<div class="overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h4>Your basket</h4>
+    <i class="fas fa-times" id="closeCart" style="cursor:pointer;"></i>
+  </div>
+  <div class="cart-items-list" id="cartItemsList"></div>
+  <div id="cartTotal" style="font-weight:bold; margin: 16px 0;">Total: &pound;0</div>
+  <button id="checkoutDrawerBtn" class="btn checkout-btn">Secure Checkout</button>
+  <p style="font-size:12px; margin-top:12px; text-align:center;">Secure payments: Stripe | PayPal | Free UK delivery over &pound;800</p>
+</div>
+
+<div class="checkout-backdrop" id="checkoutBackdrop"></div>
+<div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+  <button class="modal-close" id="closeCheckout" type="button" aria-label="Close checkout">&times;</button>
+  <div class="checkout-grid">
+    <div>
+      <span class="eyebrow">Secure checkout</span>
+      <h2 style="margin-top:12px; font-size:clamp(2rem, 3vw, 2.8rem); letter-spacing:-0.04em;">Finish your order</h2>
+      <p style="margin-top:10px; color:rgba(17,17,17,0.66); max-width:56ch;">Complete your delivery details and confirm your preferred payment method. The cart summary updates live on the right.</p>
+      <form id="checkoutForm" class="checkout-form">
+        <div class="checkout-row" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px;">
+          <input type="text" name="firstName" placeholder="First name" required>
+          <input type="text" name="lastName" placeholder="Last name" required>
+        </div>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="tel" name="phone" placeholder="Phone number" required>
+        <input type="text" name="address" placeholder="Delivery address" required>
+        <div class="checkout-row" style="display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px;">
+          <input type="text" name="city" placeholder="City" required>
+          <input type="text" name="postcode" placeholder="Postcode" required>
+        </div>
+        <select name="delivery" required>
+          <option value="">Choose delivery</option>
+          <option value="standard">Standard UK delivery</option>
+          <option value="express">Express delivery</option>
+          <option value="white-glove">White glove assembly</option>
+        </select>
+        <select name="payment" required>
+          <option value="">Choose payment method</option>
+          <option value="card">Card payment</option>
+          <option value="paypal">PayPal</option>
+          <option value="klarna">Klarna</option>
+        </select>
+        <textarea name="notes" placeholder="Delivery notes or apartment access details (optional)"></textarea>
+        <button class="btn btn-gold" type="submit">Place Order</button>
+      </form>
+    </div>
+    <aside class="checkout-summary" id="checkoutSummary"></aside>
+  </div>
+</div>
+
+<script>
+  // ---------- PRODUCT DATA ----------
+  const allProducts = [
+    { id: 9, name: "Lilly 2C2 Sofa", category: "sofas", price: 1699, img: "https://placehold.co/800x600/F1E5DE/91604B?text=Lilly+2C2", dimensions: "2C2 configuration", material: "Boucle fabric, oak frame", delivery: "2-3 weeks" },
+    { id: 10, name: "Malibo 2C2 Sofa", category: "sofas", price: 1799, img: "https://placehold.co/800x600/E6D7C8/7C5B43?text=Malibo+2C2", dimensions: "2C2 configuration", material: "Soft velvet, hardwood base", delivery: "2-4 weeks" },
+    { id: 11, name: "Verona 2C2 Sofa", category: "sofas", price: 1749, img: "https://placehold.co/800x600/EFE6DA/6E5540?text=Verona+2C2", dimensions: "2C2 configuration", material: "Chenille weave, oak legs", delivery: "2-4 weeks" },
+    { id: 12, name: "Falcon 3+2 Sofa Set", category: "sofas", price: 2199, img: "https://placehold.co/800x600/D9C5B1/5D4635?text=Falcon+3%2B2", dimensions: "3 seater + 2 seater", material: "Textured weave, solid frame", delivery: "Made to order" },
+    { id: 13, name: "Chesterfield 3+2 Sofa Set", category: "sofas", price: 2499, img: "https://placehold.co/800x600/C9B1A0/4D3B31?text=Chesterfield+3%2B2", dimensions: "3 seater + 2 seater", material: "Classic tufted velvet", delivery: "Made to order" },
+    { id: 14, name: "Malibo 3+2 Sofa Set", category: "sofas", price: 2299, img: "https://placehold.co/800x600/BFAFA1/44362B?text=Malibo+3%2B2", dimensions: "3 seater + 2 seater", material: "Premium velvet, walnut feet", delivery: "2-4 weeks" },
+    { id: 15, name: "Dino 3+2 Sofa Set", category: "sofas", price: 2149, img: "https://placehold.co/800x600/B89D89/FFFFFF?text=Dino+3%2B2", dimensions: "3 seater + 2 seater", material: "Performance fabric, oak frame", delivery: "2-3 weeks" },
+    { id: 16, name: "Oakland U-Shape Sofa", category: "sofas", price: 2999, img: "https://placehold.co/800x600/9C816A/FFFFFF?text=Oakland+U-Shape", dimensions: "U-shape sectional", material: "Boucle fabric, modular frame", delivery: "Made to order" },
+    { id: 17, name: "Oakland 2+2 Sofa Set", category: "sofas", price: 2249, img: "https://placehold.co/800x600/8E7661/FFFFFF?text=Oakland+2%2B2", dimensions: "2 seater + 2 seater", material: "Chenille, hardwood frame", delivery: "2-4 weeks" },
+    { id: 18, name: "Olympia 3+2 Sofa Set", category: "sofas", price: 2399, img: "https://placehold.co/800x600/A88F77/FFFFFF?text=Olympia+3%2B2", dimensions: "3 seater + 2 seater", material: "Woven fabric, beech legs", delivery: "2-4 weeks" },
+    { id: 19, name: "Nicole Sofa", category: "sofas", price: 1599, img: "https://placehold.co/800x600/BCAA95/4B3D31?text=Nicole", dimensions: "Compact lounge sofa", material: "Soft-touch fabric, oak base", delivery: "1-2 weeks" },
+    { id: 1, name: "Luna Velvet Sofa", category: "sofas", price: 1899, img: "https://placehold.co/800x600/0A2F44/FFFFFF?text=Luna+Sofa", dimensions: "W210 x D85 x H78 cm", material: "Velvet, solid oak", delivery: "Free UK delivery, 2-4 weeks" },
+    { id: 2, name: "Oslo Armchair", category: "armchairs", price: 799, img: "https://placehold.co/800x600/9B8E6E/FFFFFF?text=Oslo+Chair", dimensions: "W78 x D82 cm", material: "Wool blend & steel", delivery: "1-2 weeks" },
+    { id: 3, name: "Eden Dining Chair (Set of 2)", category: "dining", price: 459, img: "https://placehold.co/800x600/CFB284/FFFFFF?text=Eden+Dining", dimensions: "W48 x D54 cm", material: "Oak & cream fabric", delivery: "Express available" },
+    { id: 4, name: "Aura Marble Side Table", category: "accessories", price: 289, img: "https://placehold.co/800x600/C5A572/FFFFFF?text=Marble+Table", dimensions: "45cm diameter", material: "Marble, brass", delivery: "In stock" },
+    { id: 5, name: "Nube Modular Sofa", category: "sofas", price: 2799, img: "https://placehold.co/800x600/1A3E4C/FFFFFF?text=Nube+Modular", dimensions: "Configurable", material: "Deep blue weave", delivery: "Made to order" },
+    { id: 6, name: "Cielo Velvet Armchair", category: "armchairs", price: 1099, img: "https://placehold.co/800x600/796A50/FFFFFF?text=Cielo+Velvet", dimensions: "W82 cm", material: "Velvet, gold legs", delivery: "Free delivery" },
+    { id: 7, name: "Clayton Dining Table", category: "dining", price: 1249, img: "https://placehold.co/800x600/AB8E5C/FFFFFF?text=Clayton+Table", dimensions: "L180 cm", material: "Solid oak", delivery: "White glove" },
+    { id: 8, name: "Gold Arc Floor Lamp", category: "accessories", price: 199, img: "https://placehold.co/800x600/CFAF7C/FFFFFF?text=Arc+Lamp", dimensions: "H150 cm", material: "Brass", delivery: "Next day" }
+  ];
+
+  document.title = "OVAA | Luxury Sofas for Modern Living";
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute("content", "OVAA is a modern luxury furniture store for the UK, offering premium sofas, refined living room pieces, and elegant home delivery.");
+  }
+  const metaKeywords = document.querySelector('meta[name="keywords"]');
+  if (metaKeywords) {
+    metaKeywords.setAttribute("content", "sofas UK, luxury furniture, modern sofas, OVAA, premium sofa store, contemporary furniture, UK delivery");
+  }
+
+  const temporarySofaImages = [
+    "https://images.pexels.com/photos/20130631/pexels-photo-20130631.jpeg?cs=srgb&dl=pexels-wolfart-20130631.jpg&fm=jpg",
+    "https://images.pexels.com/photos/19866404/pexels-photo-19866404.jpeg?cs=srgb&dl=pexels-lisa-anna-901356985-19866404.jpg&fm=jpg",
+    "https://images.pexels.com/photos/35373120/pexels-photo-35373120.jpeg?cs=srgb&dl=pexels-pexels-user-130660730-35373120.jpg&fm=jpg",
+    "https://images.pexels.com/photos/11073302/pexels-photo-11073302.jpeg?cs=srgb&dl=pexels-vanessa-martins-174292831-11073302.jpg&fm=jpg",
+    "https://images.pexels.com/photos/34811396/pexels-photo-34811396.jpeg?cs=srgb&dl=pexels-taher-bahrainwala-220238-34811396.jpg&fm=jpg",
+  ];
+
+  allProducts
+    .filter((product) => product.category === "sofas")
+    .forEach((product, index) => {
+      product.img = temporarySofaImages[index % temporarySofaImages.length];
+    });
+
+  let cart = [];
+  let currentPage = "home";
+  let currentCategory = "all";
+  let selectedProductId = null;
+  const moneyFormatter = new Intl.NumberFormat("en-GB", {
+    style: "currency",
+    currency: "GBP",
+  });
+
+  function formatGBP(value) {
+    return moneyFormatter.format(value);
+  }
+
+  function getCategoryLabel(category) {
+    const labels = {
+      sofas: "Sofas",
+      armchairs: "Armchairs",
+      dining: "Dining",
+      accessories: "Accessories",
+    };
+    return labels[category] || "Collection";
+  }
+
+  function getCartTotals() {
+    const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const delivery = subtotal === 0 ? 0 : subtotal >= 800 ? 0 : 25;
+    return {
+      subtotal,
+      delivery,
+      total: subtotal + delivery,
+      count: cart.reduce((sum, item) => sum + item.qty, 0),
+    };
+  }
+
+  // helpers
+  function saveCart() {
+    localStorage.setItem("ovaa_cart", JSON.stringify(cart));
+    updateCartUI();
+  }
+  function loadCart() {
+    const saved = localStorage.getItem("ovaa_cart");
+    cart = saved ? JSON.parse(saved) : [];
+    updateCartUI();
+  }
+  function updateCartUI() {
+    const totalItems = cart.reduce((sum, i) => sum + i.qty, 0);
+    document.getElementById("cartCount").innerText = totalItems;
+    renderCartDrawer();
+  }
+  function addToCart(product) {
+    const existing = cart.find(item => item.id === product.id);
+    if(existing) existing.qty++;
+    else cart.push({ ...product, qty: 1 });
+    saveCart();
+    showNotification(`${product.name} added to basket`);
+  }
+  function removeCartItem(id) {
+    cart = cart.filter(item => item.id !== id);
+    saveCart();
+  }
+  function updateQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if(item) {
+      item.qty += delta;
+      if(item.qty <= 0) removeCartItem(id);
+      else saveCart();
+    }
+  }
+  function showNotification(msg) {
+    let notif = document.createElement('div');
+    notif.innerText = msg;
+    notif.style.position = 'fixed';
+    notif.style.bottom = '20px';
+    notif.style.left = '20px';
+    notif.style.background = '#111111';
+    notif.style.color = 'white';
+    notif.style.padding = '14px 20px';
+    notif.style.borderRadius = '999px';
+    notif.style.zIndex = '1100';
+    notif.style.fontSize = '14px';
+    notif.style.boxShadow = '0 20px 35px rgba(17,17,17,0.18)';
+    notif.style.border = '1px solid rgba(199,163,90,0.22)';
+    document.body.appendChild(notif);
+    setTimeout(() => notif.remove(), 2200);
+  }
+  function renderCartDrawer() {
+    const container = document.getElementById("cartItemsList");
+    if(!container) return;
+    if(cart.length === 0) {
+      container.innerHTML = "<p style='text-align:center; color:gray;'>Your basket is empty.</p>";
+      document.getElementById("cartTotal").innerHTML = "Total: &pound;0";
+      if (document.getElementById("checkoutSummary")) {
+        renderCheckoutSummary();
+      }
+      return;
+    }
+    let html = "";
+    let total = 0;
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      html += `
+        <div class="cart-item">
+          <div><strong>${item.name}</strong><br>${formatGBP(item.price)} x ${item.qty}</div>
+          <div>
+            <button style="background:none; border:1px solid #ddd; border-radius:20px; padding:4px 10px; margin:0 4px;" onclick="updateQty(${item.id}, -1)">-</button>
+            <span>${item.qty}</span>
+            <button style="background:none; border:1px solid #ddd; border-radius:20px; padding:4px 10px; margin:0 4px;" onclick="updateQty(${item.id}, 1)">+</button>
+            <button style="background:none; border:none; color:#b00; margin-left:8px;" onclick="removeCartItem(${item.id})"><i class="fas fa-trash-alt"></i></button>
+          </div>
+        </div>
+      `;
+    });
+    container.innerHTML = html;
+    const delivery = total >= 800 ? 0 : 25;
+    document.getElementById("cartTotal").innerHTML = `Total: ${formatGBP(total + delivery)}${delivery === 0 ? " &bull; Free delivery" : " &bull; Delivery &pound;25"}`;
+    if (document.getElementById("checkoutSummary")) {
+      renderCheckoutSummary();
+    }
+  }
+  window.updateQty = updateQty;
+  window.removeCartItem = removeCartItem;
+
+  // Product card helper
+  function productCardHTML(p) {
+    return `<div class="product-card reveal" data-id="${p.id}">
+      <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+      <div class="product-info">
+        <h3>${p.name}</h3>
+        <p class="product-subline">${p.material}</p>
+        <p class="product-subline">${p.delivery}</p>
+        <div class="price">${formatGBP(p.price)}</div>
+        <div class="card-actions">
+          <button class="btn btn-outline btn-small view-details" data-id="${p.id}">View Details</button>
+          <button class="btn btn-gold btn-small add-to-cart" data-id="${p.id}" data-name="${p.name}" data-price="${p.price}">Add to Cart</button>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // Page render functions
+  function renderHome() {
+    const featured = allProducts.filter(p => p.category === "sofas").slice(0,4);
+    return `
+      <div class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <h1>Where comfort meets <span class="text-gold">modern luxury</span></h1>
+              <p>Discover Ovaa — timeless sofas, armchairs and accessories, crafted for the contemporary UK home. Free delivery on orders over £800.</p>
+              <a href="#" class="btn btn-gold" data-nav-shop>Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+              <img src="https://placehold.co/1000x700/0A2F44/FFFFFF?text=Luxury+Velvet+Sofa+OVAA" alt="Hero sofa">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured sofa ranges</h2>
+          <p>New models now available in the Ovaa sofa collection</p>
+        </div>
+        <div class="product-grid">
+          ${featured.map(p => productCardHTML(p)).join('')}
+        </div>
+        <div class="brand-story">
+          <div class="container story-inner">
+            <div class="story-text">
+              <h3>British design, global soul</h3>
+              <p style="margin: 20px 0;">Ovaa was born in London with a passion for sculptural forms and tactile fabrics. Every piece is designed to bring warmth and elegance into your home. From velvet sofas to hand-finished oak, we combine comfort with conscience.</p>
+              <a href="#" class="btn" data-page-nav="about">Discover our story</a>
+            </div>
+            <div class="story-icon">
+              <i class="fas fa-feather-alt" style="font-size: 70px; color: var(--gold);"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  function renderShop() {
+    let filtered = currentCategory === "all" ? allProducts : allProducts.filter(p => p.category === currentCategory);
+    return `
+      <div class="container" style="margin-top: 40px;">
+        <div class="section-header"><h2>Our collections</h2><p>Luxury furniture for every room</p></div>
+        <div class="categories">
+          <button class="cat-btn ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">All</button>
+          <button class="cat-btn ${currentCategory === 'sofas' ? 'active' : ''}" data-cat="sofas">Sofas</button>
+          <button class="cat-btn ${currentCategory === 'armchairs' ? 'active' : ''}" data-cat="armchairs">Armchairs</button>
+          <button class="cat-btn ${currentCategory === 'dining' ? 'active' : ''}" data-cat="dining">Dining Chairs</button>
+          <button class="cat-btn ${currentCategory === 'accessories' ? 'active' : ''}" data-cat="accessories">Accessories</button>
+        </div>
+        <div class="product-grid" id="shopGrid">
+          ${filtered.map(p => productCardHTML(p)).join('')}
+        </div>
+      </div>
+    `;
+  }
+  function renderProductDetail(productId) {
+    const prod = allProducts.find(p => p.id == productId);
+    if(!prod) return "<div>Product not found</div>";
+    return `
+      <div class="container" style="margin: 60px auto; max-width: 1100px;">
+        <div style="display:flex; flex-wrap:wrap; gap:48px;">
+          <div style="flex:1;"><img src="${prod.img}" style="width:100%; border-radius:32px; box-shadow:var(--shadow-sm);" alt="${prod.name}"></div>
+          <div style="flex:1;">
+            <h1 style="font-size:2.2rem;">${prod.name}</h1>
+            <div class="price" style="font-size:1.8rem;">£${prod.price}</div>
+            <p><strong>Dimensions:</strong> ${prod.dimensions}</p>
+            <p><strong>Material:</strong> ${prod.material}</p>
+            <p><strong>Delivery info:</strong> ${prod.delivery}</p>
+            <p style="margin: 20px 0;">Elegant silhouette, superior comfort — a true Ovaa signature.</p>
+            <button class="btn btn-gold" id="detailAddBtn" data-id="${prod.id}" data-name="${prod.name}" data-price="${prod.price}">Add to Cart — £${prod.price}</button>
+            <p class="mt-2"><i class="fas fa-truck"></i> Free UK delivery on orders over £800</p>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  function renderAbout() {
+    return `<div class="container" style="margin:70px auto; max-width:800px;"><div class="section-header"><h2>About Ovaa</h2></div>
+    <div style="text-align:center;"><p style="font-size:1.1rem;">We are a UK-based furniture brand, blending Scandinavian minimalism with British sophistication. Our pieces are built to last, using sustainable wood and eco-friendly fabrics. Every Ovaa product is designed in London and delivered with care to your doorstep.</p>
+    <div style="margin:50px 0;"><i class="fas fa-medal" style="font-size:48px; color:var(--gold);"></i><p style="margin-top:12px;">Quality assured — 5 year warranty on all frames</p></div>
+    </div></div>`;
+  }
+  function renderContact() {
+    return `<div class="container" style="margin:70px auto; text-align:center;"><h2>Get in touch</h2>
+    <div style="display:flex; flex-direction:column; gap:16px; max-width:400px; margin:30px auto;">
+      <p><i class="fas fa-phone-alt"></i> +44 (0) 20 1234 5678</p>
+      <p><i class="fas fa-envelope"></i> hello@ovaa.co.uk</p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/447900123456" target="_blank" style="color:var(--deep-blue);">WhatsApp +44 7900 123456</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Showroom: 27 Shoreditch High St, London, E1 6PG</p>
+    </div></div>`;
+  }
+  function renderFAQ() {
+    return `<div class="container" style="margin:70px auto; max-width:800px;"><h2 style="text-align:center;">FAQs</h2>
+    <div style="margin-top:40px;"><h3>🛋️ Shipping & delivery</h3><p>Standard UK delivery (3-5 days) £25, free over £800. Express 2-day available.</p>
+    <h3>🔄 Returns</h3><p>30-day returns. We arrange collection.</p>
+    <h3>💳 Payment methods</h3><p>Stripe, PayPal, Klarna (soon). Secure SSL checkout.</p>
+    <h3>📦 Assembly service</h3><p>Add white glove assembly for £49.</p></div></div>`;
+  }
+  function renderBlog() {
+    return `<div class="container" style="margin:70px auto;"><div class="section-header"><h2>Home décor journal</h2></div>
+    <div class="product-grid"><div class="product-card"><div class="product-img"><img src="https://placehold.co/600x400/EEE5DB/0A2F44?text=Sofa+Guide"></div><div class="product-info"><h3>5 tips for choosing the perfect sofa</h3><p>Learn about fabric, fillings, and proportions for your living room.</p><a href="#" style="color:var(--gold);">Read more →</a></div></div>
+    <div class="product-card"><div class="product-img"><img src="https://placehold.co/600x400/DCCCA9/0A2F44?text=Blue+Accent"></div><div class="product-info"><h3>How to style deep blue furniture</h3><p>Pair with cream walls and gold accents.</p><a href="#" style="color:var(--gold);">Read more →</a></div></div></div></div>`;
+  }
+
+  function renderCheckoutSummary() {
+    const summary = document.getElementById("checkoutSummary");
+    if (!summary) return;
+
+    if (cart.length === 0) {
+      summary.innerHTML = `
+        <h3>Your order</h3>
+        <p style="color:rgba(17,17,17,0.66);">Your basket is empty. Add a sofa or accessory to begin checkout.</p>
+      `;
+      return;
+    }
+
+    const totals = getCartTotals();
+    const items = cart.map(item => `
+      <div class="summary-line">
+        <span>${item.qty} x ${item.name}</span>
+        <strong>${formatGBP(item.price * item.qty)}</strong>
+      </div>
+    `).join("");
+
+    summary.innerHTML = `
+      <h3>Your order</h3>
+      <div class="summary-lines">
+        ${items}
+      </div>
+      <div class="summary-lines" style="margin-top:18px;">
+        <div class="summary-line"><span>Subtotal</span><strong>${formatGBP(totals.subtotal)}</strong></div>
+        <div class="summary-line"><span>Delivery</span><strong>${totals.delivery === 0 ? "Free" : formatGBP(totals.delivery)}</strong></div>
+        <div class="summary-line summary-total"><span>Total</span><strong>${formatGBP(totals.total)}</strong></div>
+      </div>
+      <p style="margin-top:14px; color:rgba(17,17,17,0.66); font-size:0.9rem;">VAT is included in the displayed prices.</p>
+    `;
+  }
+
+  function openCartDrawer() {
+    closeCheckoutModal();
+    const drawer = document.getElementById("cartDrawer");
+    const overlay = document.getElementById("cartOverlay");
+    drawer.classList.add("open");
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCartDrawer() {
+    const drawer = document.getElementById("cartDrawer");
+    const overlay = document.getElementById("cartOverlay");
+    drawer.classList.remove("open");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  function openCheckoutModal() {
+    closeCartDrawer();
+    const modal = document.getElementById("checkoutModal");
+    const backdrop = document.getElementById("checkoutBackdrop");
+    renderCheckoutSummary();
+    modal.classList.add("open");
+    backdrop.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCheckoutModal() {
+    const modal = document.getElementById("checkoutModal");
+    const backdrop = document.getElementById("checkoutBackdrop");
+    modal.classList.remove("open");
+    backdrop.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function setupRevealAnimations() {
+    const items = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window)) {
+      items.forEach(item => item.classList.add("is-visible"));
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    });
+
+    items.forEach(item => observer.observe(item));
+  }
+
+  function renderHome() {
+    const featured = allProducts.filter(p => p.category === "sofas").slice(0, 6);
+    const features = [
+      {
+        icon: "fa-truck",
+        title: "Free UK Delivery",
+        text: "Complimentary delivery on orders over £800 with trusted nationwide service.",
+      },
+      {
+        icon: "fa-gem",
+        title: "Premium Quality",
+        text: "Luxury fabrics, refined silhouettes, and long-lasting frames selected for modern homes.",
+      },
+      {
+        icon: "fa-headset",
+        title: "24/7 Support",
+        text: "A friendly UK customer care team ready to help with product, delivery, and checkout questions.",
+      },
+    ];
+    const testimonials = [
+      {
+        name: "Emma R.",
+        location: "Chelsea, London",
+        quote: "The sofa feels beautiful and elevated. The whole buying experience felt genuinely premium.",
+      },
+      {
+        name: "James H.",
+        location: "Cheshire",
+        quote: "The quality is excellent and the delivery was smooth. It instantly made the room feel complete.",
+      },
+      {
+        name: "Amina S.",
+        location: "Leeds",
+        quote: "Clean design, quick support, and a lovely finish. OVAA feels like a proper luxury brand.",
+      },
+    ];
+    const showcaseCards = [
+      {
+        title: "Velvet Sofa Living",
+        text: "Soft textures and warm neutrals for a polished home.",
+        img: temporarySofaImages[1],
+      },
+      {
+        title: "Modern Media Room",
+        text: "A calm, refined setup with layered lighting.",
+        img: temporarySofaImages[2],
+      },
+      {
+        title: "Designer Lounge",
+        text: "Tailored comfort with a fresh contemporary palette.",
+        img: temporarySofaImages[3],
+      },
+      {
+        title: "Statement Corners",
+        text: "Luxury accents that make the room feel complete.",
+        img: temporarySofaImages[4],
+      },
+    ];
+    const heroImage = temporarySofaImages[0];
+
+    return `
+      <section class="hero section-shell">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content reveal" style="--delay:0.04s;">
+              <div class="hero-kicker">UK luxury furniture</div>
+              <h1>Luxury Sofas for Modern Living</h1>
+              <p>Premium comfort. Delivered across the UK.</p>
+              <div class="hero-actions">
+                <a href="#" class="btn btn-gold" data-nav-shop>Shop Now <i class="fas fa-arrow-right"></i></a>
+                <a href="#featured" class="btn btn-outline">Explore Collection</a>
+              </div>
+              <div class="hero-badges">
+                <span class="hero-badge">Free UK delivery over £800</span>
+                <span class="hero-badge">Modern luxury silhouettes</span>
+                <span class="hero-badge">Hand-picked materials</span>
+              </div>
+            </div>
+            <div class="hero-visual reveal" style="--delay:0.12s;">
+              <div class="hero-image-card">
+                <img src="${heroImage}" alt="Luxury sofa collection">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" style="padding-top: 0;">
+        <div class="container">
+          <div class="section-header reveal" style="max-width: 920px; margin-left: auto; margin-right: auto;">
+            <span class="eyebrow">Curated living</span>
+            <h2>Explore Premium Sofas and Designer Furniture for Your Home</h2>
+            <p>Discover statement pieces, tailored comfort, and refined finishes that bring a luxury showroom feel into everyday spaces.</p>
+          </div>
+          <div class="editorial-showcase reveal" style="--delay:0.08s;">
+            <div class="editorial-banner">
+              <img src="${temporarySofaImages[1]}" alt="Modern luxury living room">
+              <div class="editorial-overlay">
+                <span class="eyebrow" style="color:rgba(255,255,255,0.72);">Luxury Sofas</span>
+                <h3>Discover our collection of luxury sofas designed for ultimate comfort and style.</h3>
+                <p>Elegant, modern, and crafted to feel at home in elevated UK interiors.</p>
+              </div>
+            </div>
+            <div class="editorial-thumbs">
+              ${showcaseCards.map((card) => `
+                <article class="editorial-card">
+                  <img src="${card.img}" alt="${card.title}" loading="lazy">
+                  <div class="editorial-card-label">
+                    <strong>${card.title}</strong>
+                    <span>${card.text}</span>
+                  </div>
+                </article>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="container">
+          <div class="feature-grid">
+            ${features.map((feature, index) => `
+              <article class="feature-card reveal" style="--delay:${0.04 + index * 0.06}s;">
+                <i class="fas ${feature.icon}" aria-hidden="true"></i>
+                <h3>${feature.title}</h3>
+                <p>${feature.text}</p>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="featured">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Shop the edit</span>
+            <h2>Featured sofa ranges</h2>
+            <p>Discover our most sought-after pieces from the OVAA sofa collection.</p>
+          </div>
+          <div class="product-grid">
+            ${featured.map((p) => productCardHTML(p)).join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="container">
+          <div class="story-banner reveal">
+            <div>
+              <span class="eyebrow">About OVAA</span>
+              <h2>Refined comfort for contemporary UK interiors.</h2>
+              <p>OVAA brings together tactile fabrics, elevated proportions, and thoughtful craftsmanship to create sofas that feel at home in modern spaces. From statement sectionals to compact lounge pieces, every design is selected to feel calm, polished, and unmistakably premium.</p>
+              <div class="story-bullets">
+                <div class="story-bullet">
+                  <strong>London-led design</strong>
+                  <span>Created with a clean, city-ready aesthetic.</span>
+                </div>
+                <div class="story-bullet">
+                  <strong>Made to last</strong>
+                  <span>Considered materials and sturdy frames throughout.</span>
+                </div>
+                <div class="story-bullet">
+                  <strong>UK delivery</strong>
+                  <span>Reliable nationwide delivery and support.</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:14px;">
+              <img src="ovaa-logo-classy.png" alt="OVAA brand signature" style="width:100%; display:block; border-radius:18px;">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Client stories</span>
+            <h2>What customers say</h2>
+            <p>Elegant homes, smooth service, and a premium buying experience across the UK.</p>
+          </div>
+          <div class="testimonial-grid">
+            ${testimonials.map((testimonial, index) => `
+              <article class="testimonial-card reveal" style="--delay:${0.04 + index * 0.06}s;">
+                <div style="color:var(--gold); letter-spacing:0.12em; font-size:0.92rem; margin-bottom:12px;">★★★★★</div>
+                <p style="font-size:1rem;">“${testimonial.quote}”</p>
+                <h3 style="margin-top:18px;">${testimonial.name}</h3>
+                <p>${testimonial.location}</p>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <div>
+              <span class="eyebrow" style="color:rgba(255,255,255,0.62);">Ready to elevate your home?</span>
+              <h2>Upgrade Your Living Space Today</h2>
+              <p>Discover the OVAA collection and order with confidence from a modern UK luxury brand.</p>
+            </div>
+            <a href="#" class="btn btn-gold" data-nav-shop>Order Now</a>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderShop() {
+    const filtered = currentCategory === "all" ? allProducts : allProducts.filter(p => p.category === currentCategory);
+    return `
+      <section class="section-shell">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Shop OVAA</span>
+            <h2>Our collection</h2>
+            <p>Luxury furniture for every room. Browse sofas, seating, dining, and accents with premium UK styling.</p>
+          </div>
+          <div class="categories">
+            <button class="cat-btn ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">All</button>
+            <button class="cat-btn ${currentCategory === 'sofas' ? 'active' : ''}" data-cat="sofas">Sofas</button>
+            <button class="cat-btn ${currentCategory === 'armchairs' ? 'active' : ''}" data-cat="armchairs">Armchairs</button>
+            <button class="cat-btn ${currentCategory === 'dining' ? 'active' : ''}" data-cat="dining">Dining</button>
+            <button class="cat-btn ${currentCategory === 'accessories' ? 'active' : ''}" data-cat="accessories">Accessories</button>
+          </div>
+          <div class="product-grid" id="shopGrid">
+            ${filtered.map(p => productCardHTML(p)).join("")}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderProductDetail(productId) {
+    const prod = allProducts.find(p => p.id == productId);
+    if (!prod) return `<div class="container" style="padding:80px 0;">Product not found</div>`;
+    const related = allProducts
+      .filter(p => p.category === prod.category && p.id !== prod.id)
+      .slice(0, 4);
+
+    return `
+      <section class="section-shell">
+        <div class="container">
+          <div class="detail-layout">
+            <div class="detail-gallery reveal">
+              <img src="${prod.img}" alt="${prod.name}" loading="lazy">
+            </div>
+            <div class="detail-panel reveal">
+              <span class="eyebrow">${getCategoryLabel(prod.category)}</span>
+              <h1>${prod.name}</h1>
+              <div class="price">${formatGBP(prod.price)}</div>
+              <p style="margin-top:12px; color:rgba(17,17,17,0.68);">A refined statement piece designed for modern UK interiors with a premium finish and comfortable proportions.</p>
+              <div class="detail-meta">
+                <div><strong>Dimensions:</strong> ${prod.dimensions}</div>
+                <div><strong>Material:</strong> ${prod.material}</div>
+                <div><strong>Delivery:</strong> ${prod.delivery}</div>
+              </div>
+              <div class="detail-bullets">
+                <div><i class="fas fa-check"></i><span>Elegant silhouette with a luxury contemporary feel.</span></div>
+                <div><i class="fas fa-check"></i><span>Free UK delivery on orders over £800.</span></div>
+                <div><i class="fas fa-check"></i><span>Secure checkout with Stripe, PayPal, and Klarna.</span></div>
+              </div>
+              <div class="hero-actions">
+                <button class="btn btn-gold" id="detailAddBtn" data-id="${prod.id}" data-name="${prod.name}" data-price="${prod.price}">Add to Cart</button>
+                <button class="btn btn-outline" id="detailCheckoutBtn" data-id="${prod.id}">Checkout Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" style="padding-top:0;">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="eyebrow">Related pieces</span>
+            <h2>More in this collection</h2>
+          </div>
+          <div class="product-grid">
+            ${related.map(p => productCardHTML(p)).join("")}
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderAbout() {
+    return `
+      <section class="section-shell">
+        <div class="container">
+          <div class="story-banner reveal">
+            <div>
+              <span class="eyebrow">About OVAA</span>
+              <h2>London design, modern comfort, and a quietly luxurious finish.</h2>
+              <p>OVAA is a UK furniture brand shaped around clean lines, premium materials, and a calm contemporary aesthetic. Our collections are chosen to bring balance, warmth, and high-end style into everyday living spaces.</p>
+              <div class="story-bullets">
+                <div class="story-bullet">
+                  <strong>Premium curation</strong>
+                  <span>Every piece is selected for quality and modern appeal.</span>
+                </div>
+                <div class="story-bullet">
+                  <strong>UK focused</strong>
+                  <span>Delivery, support, and pricing tailored to the UK market.</span>
+                </div>
+                <div class="story-bullet">
+                  <strong>Elegant by design</strong>
+                  <span>Minimal, refined, and made to feel timeless.</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:14px;">
+              <img src="ovaa-logo-classy.png" alt="OVAA logo" style="width:100%; display:block; border-radius:18px;">
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderContact() {
+    return `
+      <section class="section-shell">
+        <div class="container">
+          <div class="section-header reveal" style="text-align:center;">
+            <span class="eyebrow">Contact OVAA</span>
+            <h2>Get in touch</h2>
+            <p style="margin-left:auto; margin-right:auto;">Speak to the team about delivery, product details, or styling advice for your home.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <i class="fas fa-phone-alt"></i>
+              <h3>Phone</h3>
+              <p>+44 (0) 20 1234 5678</p>
+            </article>
+            <article class="feature-card reveal">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>hello@ovaa.co.uk</p>
+            </article>
+            <article class="feature-card reveal">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Showroom</h3>
+              <p>27 Shoreditch High St, London, E1 6PG</p>
+            </article>
+          </div>
+          <div class="story-banner reveal" style="margin-top:24px;">
+            <div>
+              <span class="eyebrow">Message us</span>
+              <h2>Luxury support with a human touch.</h2>
+              <p>Whether you are choosing a sofa, checking stock, or planning a room refresh, our team is ready to help with a smooth UK shopping experience.</p>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:14px;">
+              <img src="ovaa-logo-classy.png" alt="OVAA brand mark" style="width:100%; display:block; border-radius:18px;">
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderFAQ() {
+    return `
+      <section class="section-shell">
+        <div class="container" style="max-width:960px;">
+          <div class="section-header reveal" style="text-align:center;">
+            <span class="eyebrow">Support</span>
+            <h2>Frequently asked questions</h2>
+            <p style="margin-left:auto; margin-right:auto;">Everything you need to know about delivery, returns, and the checkout experience.</p>
+          </div>
+          <div class="feature-grid" style="grid-template-columns:1fr; gap:16px;">
+            <article class="feature-card reveal">
+              <i class="fas fa-truck"></i>
+              <h3>Shipping and delivery</h3>
+              <p>Standard UK delivery is available across the country, with free delivery on orders over £800 and white-glove options for larger pieces.</p>
+            </article>
+            <article class="feature-card reveal">
+              <i class="fas fa-undo"></i>
+              <h3>Returns</h3>
+              <p>We offer 30-day returns on eligible items. Our team can arrange a smooth collection where needed.</p>
+            </article>
+            <article class="feature-card reveal">
+              <i class="fas fa-lock"></i>
+              <h3>Payments</h3>
+              <p>Secure checkout is supported through Stripe, PayPal, and Klarna in the checkout UI.</p>
+            </article>
+            <article class="feature-card reveal">
+              <i class="fas fa-wrench"></i>
+              <h3>Assembly</h3>
+              <p>White-glove assembly can be requested at checkout for selected items and larger sofa collections.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function renderPage() {
+    const main = document.getElementById("app");
+    if(currentPage === "home") main.innerHTML = renderHome();
+    else if(currentPage === "shop") main.innerHTML = renderShop();
+    else if(currentPage === "product" && selectedProductId) main.innerHTML = renderProductDetail(selectedProductId);
+    else if(currentPage === "about") main.innerHTML = renderAbout();
+    else if(currentPage === "contact") main.innerHTML = renderContact();
+    else if(currentPage === "faq") main.innerHTML = renderFAQ();
+    else if(currentPage === "blog") main.innerHTML = renderBlog();
+    else main.innerHTML = renderHome();
+    attachDynamicEvents();
+    setupRevealAnimations();
+  }
+
+  function attachDynamicEvents() {
+    document.querySelectorAll(".add-to-cart").forEach(btn => {
+      btn.removeEventListener("click", addHandler);
+      btn.addEventListener("click", addHandler);
+    });
+    function addHandler(e) {
+      const btn = e.currentTarget;
+      const id = parseInt(btn.dataset.id);
+      const product = allProducts.find(p => p.id === id);
+      if(product) addToCart(product);
+    }
+
+    document.querySelectorAll(".view-details").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        selectedProductId = parseInt(btn.dataset.id);
+        currentPage = "product";
+        renderPage();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    document.querySelectorAll(".cat-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        currentCategory = btn.dataset.cat;
+        currentPage = "shop";
+        renderPage();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    document.querySelectorAll("[data-nav-shop]").forEach(el => el.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentPage = "shop";
+      currentCategory = "all";
+      selectedProductId = null;
+      renderPage();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }));
+
+    document.querySelectorAll(".product-card h3").forEach((title,idx) => {
+      const card = title.closest(".product-card");
+      const btn = card?.querySelector(".add-to-cart");
+      const prodId = btn?.dataset.id;
+      if(prodId) title.style.cursor = "pointer";
+      title.onclick = () => {
+        selectedProductId = parseInt(prodId);
+        currentPage = "product";
+        renderPage();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+    });
+
+    const detailBtn = document.getElementById("detailAddBtn");
+    if(detailBtn) detailBtn.addEventListener("click", (e) => {
+      const id = parseInt(detailBtn.dataset.id);
+      const prod = allProducts.find(p=>p.id===id);
+      if(prod) addToCart(prod);
+    });
+
+    const detailCheckoutBtn = document.getElementById("detailCheckoutBtn");
+    if(detailCheckoutBtn) detailCheckoutBtn.addEventListener("click", (e) => {
+      const id = parseInt(detailCheckoutBtn.dataset.id);
+      const prod = allProducts.find(p => p.id === id);
+      if (prod) {
+        addToCart(prod);
+        openCheckoutModal();
+      }
+    });
+  }
+
+  // navigation and cart drawer
+  function setupNav() {
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentPage = link.dataset.page;
+        if(currentPage === "shop") currentCategory = "all";
+        selectedProductId = null;
+        renderPage();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+    const cartBtn = document.getElementById("cartIconBtn");
+    const overlay = document.getElementById("cartOverlay");
+    const closeCart = document.getElementById("closeCart");
+    cartBtn.addEventListener("click", () => { openCartDrawer(); });
+    closeCart.addEventListener("click", () => { closeCartDrawer(); });
+    overlay.addEventListener("click", () => { closeCartDrawer(); });
+    const checkoutBackdrop = document.getElementById("checkoutBackdrop");
+    const closeCheckout = document.getElementById("closeCheckout");
+    checkoutBackdrop.addEventListener("click", () => { closeCheckoutModal(); });
+    closeCheckout.addEventListener("click", () => { closeCheckoutModal(); });
+    document.querySelectorAll("[data-page-nav]").forEach(el => el.addEventListener("click", (e) => {
+      e.preventDefault();
+      currentPage = el.dataset.pageNav;
+      selectedProductId = null;
+      renderPage();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }));
+    const checkoutForm = document.getElementById("checkoutForm");
+    checkoutForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if(cart.length === 0) { showNotification("Your basket is empty"); return; }
+      cart = [];
+      saveCart();
+      checkoutForm.reset();
+      closeCheckoutModal();
+      closeCartDrawer();
+      showNotification("Order placed successfully. We will be in touch shortly.");
+    });
+    document.getElementById("checkoutDrawerBtn").addEventListener("click", () => {
+      if(cart.length === 0) { showNotification("Your basket is empty"); return; }
+      closeCartDrawer();
+      openCheckoutModal();
+    });
+  }
+
+  loadCart();
+  setupNav();
+  renderPage();
+</script>
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="brand-row" style="gap:10px;">
+        <span class="brand-name">OVAA</span>
+        <span class="brand-accent"></span>
+      </div>
+      <p>Luxury furniture, crafted for the modern UK home with a calm, elevated finish.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <a href="#" data-page-nav="faq">FAQ</a>
+      <a href="#" data-page-nav="contact">Contact</a>
+      <a href="#" data-page-nav="faq">Delivery</a>
+      <a href="#" data-page-nav="faq">Returns</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>hello@ovaa.co.uk</p>
+      <p>+44 (0) 20 1234 5678</p>
+      <p class="newsletter-note">Showroom: 27 Shoreditch High St, London.</p>
+    </div>
+    <div>
+      <h4>Newsletter</h4>
+      <p class="newsletter-note">Join for new arrivals, styling notes, and product launches.</p>
+      <div class="subscribe"><input type="email" placeholder="Your email"><button class="btn btn-gold" style="padding:8px 20px;">→</button></div>
+      <p class="newsletter-note">Free UK delivery over £800.</p>
+    </div>
+  </div>
+  <div class="small-footer">© 2025 OVAA Furniture. Secure payments: Stripe, PayPal, Apple Pay.</div>
+</footer>
+</body>
+</html>
