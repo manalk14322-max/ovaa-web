@@ -62,7 +62,8 @@
       justify-content: space-between;
       align-items: center;
       padding: 18px 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      gap: 18px;
     }
     .logo-area {
       display: flex;
@@ -101,7 +102,7 @@
       gap: 12px;
     }
     .brand-name {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Manrope', sans-serif;
       font-size: 1.3rem;
       font-weight: 800;
       letter-spacing: 0.14em;
@@ -119,6 +120,8 @@
       display: flex;
       gap: 36px;
       list-style: none;
+      align-items: center;
+      margin-left: auto;
     }
     .nav-links a {
       text-decoration: none;
@@ -136,6 +139,19 @@
       cursor: pointer;
       background: none;
       border: none;
+      color: var(--deep-blue);
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease;
+    }
+    .cart-icon:hover {
+      background: rgba(199,163,90,0.08);
+      color: var(--gold);
+      transform: translateY(-1px);
     }
     .cart-count {
       position: absolute;
@@ -152,8 +168,23 @@
     }
     .mobile-menu {
       display: none;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       cursor: pointer;
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,0.08);
+      background: rgba(255,255,255,0.88);
+      color: var(--deep-blue);
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.22s ease, color 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+    }
+    .mobile-menu:hover {
+      background: rgba(199,163,90,0.08);
+      border-color: rgba(199,163,90,0.24);
+      color: var(--gold);
+      transform: translateY(-1px);
     }
     /* buttons */
     .btn {
@@ -445,12 +476,115 @@
     .overlay.active {
       display: block;
     }
+    .mobile-nav-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(17,17,17,0.46);
+      z-index: 980;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      backdrop-filter: blur(4px);
+    }
+    .mobile-nav-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-nav-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(86vw, 360px);
+      height: 100vh;
+      background: rgba(255,255,255,0.98);
+      border-left: 1px solid rgba(17,17,17,0.08);
+      box-shadow: -28px 0 55px rgba(17,17,17,0.18);
+      z-index: 990;
+      transform: translateX(102%);
+      transition: transform 0.28s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .mobile-nav-panel.open {
+      transform: translateX(0);
+    }
+    .mobile-nav-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(17,17,17,0.08);
+    }
+    .mobile-nav-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .mobile-nav-brand span:first-child {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.54);
+    }
+    .mobile-nav-brand strong {
+      font-size: 1.08rem;
+      letter-spacing: 0.14em;
+      color: var(--deep-blue);
+    }
+    .mobile-nav-close {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(17,17,17,0.10);
+      background: #fff;
+      color: var(--deep-blue);
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .mobile-nav-links {
+      display: grid;
+      gap: 4px;
+      margin-top: 18px;
+    }
+    .mobile-nav-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 2px;
+      border-bottom: 1px solid rgba(17,17,17,0.08);
+      color: var(--deep-blue);
+      text-decoration: none;
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .mobile-nav-links a::after {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin-left: 12px;
+      flex-shrink: 0;
+    }
+    .mobile-nav-footer {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(17,17,17,0.08);
+      color: rgba(17,17,17,0.64);
+      display: grid;
+      gap: 10px;
+      font-size: 0.92rem;
+    }
     @media (max-width: 860px) {
       .nav-links {
         display: none;
       }
       .mobile-menu {
-        display: block;
+        display: inline-flex;
       }
       .hero-content h1 {
         font-size: 2.5rem;
@@ -947,6 +1081,31 @@
       font-size: 0.85rem;
       color: rgba(255,255,255,0.76);
     }
+    .cta-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 30px 34px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, #111111 0%, #1f1f22 100%);
+      color: #fff;
+      box-shadow: 0 24px 50px rgba(17,17,17,0.18);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .cta-panel h2 {
+      color: #fff;
+      font-size: clamp(1.8rem, 3vw, 2.9rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-top: 10px;
+      max-width: 12ch;
+    }
+    .cta-panel p {
+      color: rgba(255,255,255,0.76);
+      margin-top: 12px;
+      max-width: 54ch;
+    }
     .detail-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
@@ -1178,6 +1337,9 @@
       .story-banner {
         grid-template-columns: 1fr;
       }
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
       .hero-visual {
         min-height: 460px;
       }
@@ -1198,17 +1360,15 @@
     }
     @media (max-width: 860px) {
       .nav-links {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        gap: 14px 18px;
-        margin-top: 14px;
-      }
-      .mobile-menu {
         display: none;
       }
+      .mobile-menu {
+        display: inline-flex;
+      }
       .navbar {
-        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 12px;
       }
       .hero-content h1 {
         font-size: clamp(2.4rem, 9vw, 3.2rem);
@@ -1217,7 +1377,7 @@
         min-height: 380px;
       }
       .product-grid {
-        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .feature-grid,
       .testimonial-grid,
@@ -1242,6 +1402,127 @@
       }
       .container {
         padding: 0 18px;
+      }
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
+      .navbar {
+        padding: 14px 0;
+        gap: 10px;
+      }
+      .logo-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+      }
+      .brand-name {
+        font-size: 0.98rem;
+        letter-spacing: 0.1em;
+      }
+      .brand-accent {
+        width: 14px;
+      }
+      .cart-icon,
+      .mobile-menu {
+        width: 40px;
+        height: 40px;
+      }
+      .hero {
+        padding: 28px 0 18px;
+      }
+      .hero-grid {
+        gap: 24px;
+      }
+      .hero-content h1 {
+        max-width: none;
+        font-size: clamp(2.15rem, 10vw, 2.9rem);
+      }
+      .hero-actions,
+      .hero-badges {
+        width: 100%;
+      }
+      .hero-actions .btn,
+      .cta-panel .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-badges {
+        flex-direction: column;
+      }
+      .hero-visual {
+        min-height: 280px;
+      }
+      .section-shell {
+        padding: 56px 0;
+      }
+      .section-header h2 {
+        font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+      }
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .product-img {
+        height: 220px;
+      }
+      .card-actions {
+        grid-template-columns: 1fr;
+      }
+      .feature-grid,
+      .testimonial-grid,
+      .story-bullets,
+      .editorial-thumbs,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .story-banner {
+        padding: 22px;
+      }
+      .story-banner > div:last-child {
+        padding: 10px !important;
+      }
+      .editorial-banner {
+        min-height: 280px;
+      }
+      .editorial-overlay {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+      }
+      .editorial-overlay h3 {
+        max-width: none;
+        font-size: clamp(1.35rem, 8vw, 2rem);
+      }
+      .editorial-card {
+        min-height: 160px;
+      }
+      .cta-panel {
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .checkout-modal {
+        width: calc(100vw - 12px);
+        padding: 16px;
+        border-radius: 22px;
+      }
+      .checkout-grid,
+      .detail-layout {
+        grid-template-columns: 1fr;
+      }
+      .checkout-summary,
+      .detail-panel {
+        padding: 20px;
+      }
+      .cart-drawer {
+        width: min(94vw, 340px);
+        padding: 18px;
+      }
+      .mobile-nav-panel {
+        width: min(90vw, 330px);
+        padding: 18px;
       }
     }
   </style>
@@ -1271,10 +1552,33 @@
         <i class="fas fa-shopping-bag"></i>
         <span class="cart-count" id="cartCount">0</span>
       </button>
-      <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+      <button class="mobile-menu" id="mobileMenuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </div>
 </header>
+
+<div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+<nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation">
+  <div class="mobile-nav-top">
+    <div class="mobile-nav-brand">
+      <span>OVAA</span>
+      <strong>Luxury Interiors</strong>
+    </div>
+    <button class="mobile-nav-close" id="mobileNavClose" type="button" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#" class="nav-link" data-page="home">Home</a>
+    <a href="#" class="nav-link" data-page="shop">Shop</a>
+    <a href="#" class="nav-link" data-page="about">About</a>
+    <a href="#" class="nav-link" data-page="contact">Contact</a>
+  </div>
+  <div class="mobile-nav-footer">
+    <span>Free UK delivery on orders over &pound;800</span>
+    <span>Modern sofas. Premium service.</span>
+  </div>
+</nav>
 
 <main id="app"></main>
 
@@ -1660,6 +1964,7 @@
   }
 
   function openCartDrawer() {
+    closeMobileNav();
     closeCheckoutModal();
     const drawer = document.getElementById("cartDrawer");
     const overlay = document.getElementById("cartOverlay");
@@ -1677,6 +1982,7 @@
   }
 
   function openCheckoutModal() {
+    closeMobileNav();
     closeCartDrawer();
     const modal = document.getElementById("checkoutModal");
     const backdrop = document.getElementById("checkoutBackdrop");
@@ -1694,6 +2000,37 @@
     backdrop.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+  }
+
+  function openMobileNav() {
+    closeCartDrawer();
+    closeCheckoutModal();
+    const panel = document.getElementById("mobileNavPanel");
+    const backdrop = document.getElementById("mobileNavBackdrop");
+    const menuBtn = document.getElementById("mobileMenuBtn");
+    if (!panel || !backdrop || !menuBtn) return;
+    panel.classList.add("open");
+    backdrop.classList.add("active");
+    menuBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMobileNav() {
+    const panel = document.getElementById("mobileNavPanel");
+    const backdrop = document.getElementById("mobileNavBackdrop");
+    const menuBtn = document.getElementById("mobileMenuBtn");
+    if (!panel || !backdrop || !menuBtn) return;
+    panel.classList.remove("open");
+    backdrop.classList.remove("active");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  function toggleMobileNav() {
+    const panel = document.getElementById("mobileNavPanel");
+    if (!panel) return;
+    if (panel.classList.contains("open")) closeMobileNav();
+    else openMobileNav();
   }
 
   function setupRevealAnimations() {
@@ -2161,6 +2498,7 @@
 
     document.querySelectorAll("[data-nav-shop]").forEach(el => el.addEventListener("click", (e) => {
       e.preventDefault();
+      closeMobileNav();
       currentPage = "shop";
       currentCategory = "all";
       selectedProductId = null;
@@ -2204,6 +2542,7 @@
     document.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
+        closeMobileNav();
         currentPage = link.dataset.page;
         if(currentPage === "shop") currentCategory = "all";
         selectedProductId = null;
@@ -2211,6 +2550,18 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     });
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileNavBackdrop = document.getElementById("mobileNavBackdrop");
+    const mobileNavClose = document.getElementById("mobileNavClose");
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener("click", toggleMobileNav);
+    }
+    if (mobileNavBackdrop) {
+      mobileNavBackdrop.addEventListener("click", closeMobileNav);
+    }
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener("click", closeMobileNav);
+    }
     const cartBtn = document.getElementById("cartIconBtn");
     const overlay = document.getElementById("cartOverlay");
     const closeCart = document.getElementById("closeCart");
@@ -2223,6 +2574,7 @@
     closeCheckout.addEventListener("click", () => { closeCheckoutModal(); });
     document.querySelectorAll("[data-page-nav]").forEach(el => el.addEventListener("click", (e) => {
       e.preventDefault();
+      closeMobileNav();
       currentPage = el.dataset.pageNav;
       selectedProductId = null;
       renderPage();
@@ -2243,6 +2595,16 @@
       if(cart.length === 0) { showNotification("Your basket is empty"); return; }
       closeCartDrawer();
       openCheckoutModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeMobileNav();
+        closeCartDrawer();
+        closeCheckoutModal();
+      }
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) closeMobileNav();
     });
   }
 
