@@ -830,7 +830,7 @@
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 26px;
       margin-bottom: 0;
     }
@@ -840,6 +840,8 @@
       border: 1px solid var(--line);
       border-radius: 28px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
       box-shadow: var(--shadow-sm);
     }
@@ -860,8 +862,24 @@
       opacity: 1;
     }
     .product-img {
+      position: relative;
       height: 260px;
       background: linear-gradient(180deg, #faf7f2, #f3ebe1);
+    }
+    .product-chip {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      z-index: 1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(17,17,17,0.82);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
     }
     .product-info {
       padding: 22px;
@@ -869,15 +887,45 @@
       flex-direction: column;
       gap: 12px;
     }
+    .product-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(17,17,17,0.56);
+    }
+    .product-topline strong {
+      color: var(--gold);
+      font-size: 0.73rem;
+      font-weight: 900;
+    }
     .product-info h3 {
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       line-height: 1.35;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
       color: #111;
     }
     .product-subline {
       color: rgba(17,17,17,0.62);
       font-size: 0.9rem;
+    }
+    .product-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .product-specs span {
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: #faf7f2;
+      border: 1px solid rgba(17,17,17,0.06);
+      color: rgba(17,17,17,0.74);
+      font-size: 0.78rem;
+      font-weight: 700;
     }
     .price {
       font-size: 1.2rem;
@@ -1894,6 +1942,40 @@
     return labels[category] || "Collection";
   }
 
+  function getProductCardChip(product) {
+    if (product.category !== "sofas") {
+      return getCategoryLabel(product.category).toUpperCase();
+    }
+
+    const name = product.name.toLowerCase();
+    if (name.includes("u-shape")) return "U-SHAPE";
+    if (name.includes("chesterfield")) return "CHESTERFIELD";
+    if (name.includes("modular")) return "MODULAR";
+    if (name.includes("3+2")) return "3+2 SET";
+    if (name.includes("2c2")) return "2C2 SET";
+    if (name.includes("compact")) return "COMPACT";
+    return "SOFA RANGE";
+  }
+
+  function getProductCardHeader(product) {
+    return product.category === "sofas" ? "Luxury sofa range" : getCategoryLabel(product.category);
+  }
+
+  function getProductCardAccent(product) {
+    const delivery = product.delivery.toLowerCase();
+    if (delivery.includes("made to order")) return "Made to order";
+    if (delivery.includes("free uk delivery")) return "Free delivery";
+    if (delivery.includes("free delivery")) return "Free delivery";
+    if (delivery.includes("next day")) return "Next day";
+    if (delivery.includes("in stock")) return "In stock";
+    if (delivery.includes("express available")) return "Express";
+    if (delivery.includes("white glove")) return "White glove";
+    if (delivery.includes("2-3 weeks")) return "2-3 weeks";
+    if (delivery.includes("2-4 weeks")) return "2-4 weeks";
+    if (delivery.includes("1-2 weeks")) return "1-2 weeks";
+    return product.delivery;
+  }
+
   function getCartTotals() {
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
     const delivery = subtotal === 0 ? 0 : subtotal >= 800 ? 0 : 25;
@@ -1995,12 +2077,23 @@
 
   // Product card helper
   function productCardHTML(p) {
+    const isSofa = p.category === "sofas";
     return `<div class="product-card reveal" data-id="${p.id}">
-      <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+      <div class="product-img">
+        <span class="product-chip">${getProductCardChip(p)}</span>
+        <img src="${p.img}" alt="${p.name}" loading="lazy">
+      </div>
       <div class="product-info">
+        <div class="product-topline">
+          <span>${getProductCardHeader(p)}</span>
+          <strong>${getProductCardAccent(p)}</strong>
+        </div>
         <h3>${p.name}</h3>
         <p class="product-subline">${p.material}</p>
-        <p class="product-subline">${p.delivery}</p>
+        <div class="product-specs">
+          <span>${p.dimensions}</span>
+          <span>${isSofa ? "Designed for modern living" : getCategoryLabel(p.category)}</span>
+        </div>
         <div class="price">${formatGBP(p.price)}</div>
         <div class="card-actions">
           <button class="btn btn-outline btn-small view-details" data-id="${p.id}">View Details</button>
@@ -2460,8 +2553,8 @@
         <div class="container">
           <div class="section-header reveal">
             <span class="eyebrow">Shop OVAA</span>
-            <h2>Our collection</h2>
-            <p>Luxury furniture for every room. Browse sofas, seating, dining, and accents with premium UK styling.</p>
+            <h2>Sofa collections</h2>
+            <p>Browse 2C2, 3+2, modular, and U-shape sofa ranges with premium UK styling.</p>
           </div>
           <div class="categories">
             <button class="cat-btn ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">All</button>
